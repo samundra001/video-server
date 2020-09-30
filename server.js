@@ -34,6 +34,7 @@ io.on('connection', socket => {
   }); 
 
     socket.on('disconnect', () => {
+        this.socketsArray.splice(this.socketsArray.indexOf(userId), 1);
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
     })
   })

@@ -101,6 +101,10 @@ const playStop = () => {
   }
 }
 
+ const disconnect = () => {
+     myVideoStream = null;
+}
+
 const setMuteButton = () => {
   const html = `
     <i class="fas fa-microphone"></i>
@@ -131,4 +135,8 @@ const setPlayVideo = () => {
     <span>Play Video</span>
   `
   document.querySelector('.main__video_button').innerHTML = html;
+}
+
+const disconnect = () => {
+
 }
